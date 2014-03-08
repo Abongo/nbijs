@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+</head>
+<body>
+	<div ng-app='nairobijs'>
+		<div ng-controller="MessageCtrl">
+		<div id= "chatbox"><div ng-repeat="message in messages">
+<b>{{message.name}}</b>:{{message.text}}<br>
+</div>
+</div>
+<form ng-submit="addMessage()">
+<input type="text"placeholder="Name" ng-model="message.name">{{message.name}}<br/>
+<input type="text"placeholder="Message" ng-model="message.text">{{message}}<br>
+<input type='submit'value='send'>
+</form>
+
+<pre>{{message | json}}</pre>
+<pre>{{messages | json}}</pre>
+</div>
+<superhero></superhero>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+<script src="app.js"></script>	
+
+
+
+</body>
+</html>
